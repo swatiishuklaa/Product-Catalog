@@ -1,0 +1,31 @@
+<body>
+  <h2>Login to search for your products !</h2>
+  <br><br><br><br>
+    <div class="card">
+        <div class="card-header">
+          Login
+        </div>
+        <div class="card-body">
+          
+            <form  (ngSubmit)="userLogin()">
+                <div class="form-group">
+                <label>Email address</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter email"  [(ngModel)]="user.email">
+                </div>
+                <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" [(ngModel)]="user.password">
+                </div>
+                <span id="noti" style="color: red;"></span>
+                <button type="submit" class="btn" style="background-color: #73C3F4;">Login</button>
+                <br><br>
+                <a routerLink="/signUp">Didn't have an account? SignUp!</a> 
+            </form>
+     
+        
+        </div>
+      </div>
+</body>
+
+
+

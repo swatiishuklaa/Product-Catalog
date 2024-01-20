@@ -1,0 +1,48 @@
+<body>
+    <h2>Login to search for your products !</h2>
+    <br><br><br>
+      <div class="card">
+          <div class="card-header">
+            SignUp
+          </div>
+          <div class="card-body">
+            
+              <form  #myForm="ngForm" id="login" (ngSubmit)="signUp(); myForm.resetForm() " >
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" name="Username" id="username" placeholder="Enter Username"  [(ngModel)]="user.userName">
+                    </div>
+                  <div class="form-group">
+                  <label>Email address</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Enter email"  [(ngModel)]="user.email">
+                  </div>
+                  <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password" [(ngModel)]="user.password">
+                  </div>
+                  <div class="form-group">
+                    <label>Type Again Password</label>
+                    <input  type="Password" class="form-control" name="Pass2" id="Pass2" placeholder="Password" [(ngModel)]="pass2">
+                    </div>
+                  <button type="submit" class="btn" style="background-color: #73C3F4;">Create Account</button>
+                  <br>
+                  <a routerLink="/login">Already have an account? Login!</a> 
+              </form>
+       
+          
+          </div>
+        </div>
+  </body>
+  
+  
+  
+  
+
+
+ 
+
+
+
+ 
+
+      

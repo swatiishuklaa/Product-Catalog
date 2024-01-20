@@ -1,0 +1,59 @@
+<html>
+<head></head>
+<body>
+
+  <button type="button" class="btn" id="btn1" style="margin-top: 10px;" *ngIf="filterBox" (click)="backToHome()">Back To Search</button>
+   
+  <button type="button" class="btn" style="margin-left: 1100px;" (click)="logout()">Logout</button>
+  
+  <div id="bg">
+    
+    <div class="input-group mb-3"  style="margin-left: 250px;" *ngIf="filterBox">
+      <label style="margin-right: 4px;">Brand :</label>
+      <select style="height: 30px; border-radius:5px 5px 5px 5px;" #brand (change)="onSelected()">
+        <option>Adidas</option>
+        <option>Nike</option>
+        <option>Zara</option>
+        <option>H&M</option>
+      </select>
+       <div class="input-group-append">
+        <label style="margin-left: 20px;">Price Range:</label>
+            <input type="text" [(ngModel)]="lowPrice"> To 
+            <input type="text" [(ngModel)]="highPrice">
+      </div>
+      <div>
+        <button type="button" class="btn btn-sm" style="margin-left: 3px;" id="filter" >Filter</button>
+      </div>
+    </div>
+
+    
+  <div class="searchBox" *ngIf="Searched">
+    <div class="input-group">
+      <input type="text" id="search" class="form-control" aria-label="Text input with dropdown button" [(ngModel)]="searchText">
+      <div class="input-group-append">
+        <button class="btn" style="background-color: #73C3F4; border: 1px solid black;" type="button" id="search" (click)="search()">Search</button>
+      </div>
+    </div>
+  </div>
+ 
+
+  
+     
+
+      <div class="productItems">
+        <div class="card" *ngFor="let data of productData">
+          <img class="card-img-top" src={{data.image}} alt="Card image cap" style="height: 200px; width:200px;">
+          <div class="card-body">
+            <p class="card-text">{{data.product_name}}</p>
+            <p class="card-text">{{data.brand}}</p>
+            <button class="btn" style="background-color: #73C3F4;" (click)="getDescription(data)">Show Details</button>
+            <!-- <button class="btn" style="background-color: #73C3F4; margin-left: 15%;" (click)="getPrice(data)">Show Price</button> -->
+          
+          </div>
+        </div>
+      </div>  
+     
+</div>
+</body>
+</html>
+

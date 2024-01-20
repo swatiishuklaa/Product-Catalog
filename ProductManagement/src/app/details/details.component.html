@@ -1,0 +1,29 @@
+<button class="btn" style="background-color: white; margin-left: 90%; margin-top: 1%;" (click)="backToHome()">Back</button>
+        
+<div class="container">
+    <div class="row">
+      <div class="col">
+       <img src={{data.image}} style="width: 400px; height: 500px;">
+      </div>
+    <div class="col" style="color: white;">
+        <h2>Product ID : {{data.id}}<br><br>
+        </h2>
+        <h3>Name : {{data.productName}} <br>
+        Brand : {{data.brand}} <br>
+        Price : {{data.price}}<br>
+        </h3><br>
+        <h4>Description : {{data.details}}</h4>
+        <div class="input-group mb-3"  style="margin-top: 5%;">
+            <input type="text" class="form-control" placeholder="Pincode" aria-label="Recipient's username" aria-describedby="basic-addon2" [(ngModel)]="pincode">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" style="color: white;" (click)="checkAvailability()">Check Availability</button>
+            </div>
+            <br>
+            <span id="status"></span>
+          </div>
+          
+    </div>
+</div>
+
+
+
